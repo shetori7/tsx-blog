@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/react"
 const name = "こうのとりの開発ブログ";
 export const siteTitle = "こうのとりの開発ブログ";
 
-function Layouts({ children, home }) {
+function Layouts({ children, home=false }) {
   return (
     <div>
       <Head>
