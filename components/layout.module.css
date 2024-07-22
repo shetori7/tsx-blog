@@ -1,0 +1,31 @@
+.container {
+    max-width: 1244px;
+    padding: 0 1rem;
+    margin: 3rem auto 6rem;
+  }
+  
+  .header {
+    width: 100%; /* ヘッダーの幅を全体に */
+    /* position: fixed; ヘッダーを固定する */
+    top: 0; /* 上端に配置 */
+    background-color: #ffffff; /* ヘッダーの背景色 */
+    display: flex;
+    align-items: center; /* アイテムを垂直方向の中央に配置 */
+    border-bottom: 2px solid #ccc; /* ヘッダーの下に灰色の線を追加 */
+  }
+  
+  .headerImage {
+    width: 6rem;
+    height: 6rem;
+  }
+  
+  .headerHomeImage {
+    width: 5rem;
+    height: 5rem;
+  }
+  
+  .backToHome {
+    margin: 3rem 0 0;
+  }
+
+

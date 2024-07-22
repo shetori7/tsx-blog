@@ -1,0 +1,99 @@
+.heading2Xl {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.05rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+  
+  .headingXl {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    font-weight: 550;
+    letter-spacing: -0.05rem;
+    margin: 1rem 0;
+  }
+  
+  .headingLg {
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-top: 0;
+    font-weight: 500;
+  }
+  
+  .headingMd {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .borderCircle {
+    border-radius: 1000px;
+  }
+  
+  .colorInherit {
+    color: inherit;
+  }
+  
+  .padding1px {
+    padding-top: 1px;
+  }
+  
+  .list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .listItem {
+    margin: 0 0 1.25rem;
+  }
+  
+  .lightText {
+    color: #999;
+    text-align:left
+  }
+
+  .contentText {
+    color: #000000;
+    text-align:left
+  }
+  
+  .boldText {
+    font-weight: 550;
+    font-size: 2rem;
+  }
+
+  @media  only screen and (max-width: 479px) {
+    .lightText {
+      color: #999;
+      text-align:left;
+      font-size: rem;
+      font-size: 1rem;
+
+      
+    }
+  
+    .contentText {
+      color: #000000;
+      text-align:left;
+      font-size: 1rem;
+    }
+    
+    .boldText {
+      color: rgb(88, 128, 229);
+      font-weight: 550;
+      font-size: 1rem;
+    }
+
+    .headingXl {
+      font-size: 1rem;
+      line-height: 1.3;
+      font-weight: 550;
+      letter-spacing: -0.05rem;
+      margin: 1rem 0;
+    }
+  }
+  
+

@@ -1,0 +1,127 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 100rem;
+  gap: 2rem;
+  margin: 2rem;
+}
+
+.maincontents {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 1rem;
+}
+
+.sidebar {
+  flex: 0.7 0.5;
+  min-width: 18rem;
+  overflow-wrap: break-word;
+  margin-left: 1.5rem;
+  padding: auto;
+}
+
+.bio {
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media  only screen and (max-width: 479px) {
+
+}
+
+.global {
+  background-color: #fff;
+  border-radius: 3rem;
+  flex: 2 1;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  padding: 2rem;
+  width: 3rem;
+}
+
+
+
+.sideBarImage {
+  border-radius: 500rem;
+  border: solid 1px #777777;
+  width: 5rem;
+  transition: 0.3s;
+}
+
+.sideBarImage:hover {
+  box-shadow: 0 0 20px rgba(107, 143, 203, 0.9);
+  transform: translateY(-4px);
+}
+
+.icon {
+  margin: 0 auto;
+}
+
+.sidebarMessage {
+  font-size: 0.95rem;
+  margin-top: 1rem;
+}
+
+.article {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 100em;
+}
+
+.abstract {
+  overflow: hidden;
+  text-align: left;
+  margin-top: 0.4rem;
+  word-wrap: break-word; /* テキストが要素の範囲を超えた場合に折り返す */
+}
+
+@media  only screen and (max-width: 479px) {
+  .global {
+    background-color: #fff;
+    border-radius: 1rem;
+    flex: 2 1;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    padding: 0.1rem;
+    width: 1rem;
+  }
+
+  .bio {
+    display:none;
+  }
+  .sidebar{
+    display: none;
+  }
+
+  .abstract {
+    overflow: hidden;
+    text-align: left;
+    margin-top: 0.4rem;
+    word-wrap: break-word;
+    font-size: 0.7rem;
+  }
+
+}
