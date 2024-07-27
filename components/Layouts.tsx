@@ -16,6 +16,7 @@ function Layouts({ children, home=false }) {
         <title>{siteTitle}</title>
         <meta name="description" content="開発ブログ" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="google-site-verification" content="jjXcm3S2ASguoeU-Jq_7hF_GuUkj_3b6BxU58KibHJA" />
       </Head>
       <Analytics />
       <header className={styles.header}>
