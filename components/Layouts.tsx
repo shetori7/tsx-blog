@@ -19,6 +19,7 @@ function Layouts({ children, home = false }) {
 				<link rel="icon" href="/images/shetori_big.jpg"></link>
 				<title>{siteTitle}</title>
 				<meta name="description" content="開発ブログ" />
+				<meta name="author" content="こうのとり"/>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta
 					name="google-site-verification"
