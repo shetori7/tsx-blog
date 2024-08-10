@@ -55,6 +55,8 @@
 
 .description{
     text-align: left;
+    color:#4d5156;
+
 }
 
 @media  only screen and (max-width: 479px){
