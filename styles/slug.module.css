@@ -1,0 +1,100 @@
+.container{
+    background-color: #fff;
+    border-radius: 1.4rem;
+    flex:1;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    padding:2rem;   
+    width: 3rem;
+    margin-left:4rem
+}
+
+
+
+.title{
+    width: 100%;
+    text-align: left;
+    font-size:2rem;
+    font-weight: bold;
+    color:#4d5156;
+}
+
+.titleBorder{
+    border-bottom: 2px solid;
+    background-color: rgb(12 74 110);   
+    width: 40%;
+    margin-top:0.8rem;
+}
+
+.date{
+    color: #A9A9A9; 
+    text-align: left;
+}
+
+.tagList{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag{
+    background-color: rgb(12 74 110);
+    border-radius: 0.75rem; /* 12px */
+    padding-top: 0.2rem; /* 8px */
+    padding-left: 0.5rem; /* 8px */
+    padding-right: 0.5rem; /* 8px */
+    padding-bottom: 0.25rem; /* 4px */
+    font-weight: 500;
+    margin-right: 0.5rem; /* 8px */
+    font-size: 0.8rem;
+}
+
+
+
+.tagText{
+    color: white; 
+}
+
+.tagText:before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f02b';
+    font-weight: 900;
+    padding-top: 0.1rem;
+    padding-left: 0.1rem;
+    padding-right: 0.3rem;
+}
+
+
+.description{
+    text-align: left;
+    color:#4d5156
+}
+
+@media  only screen and (max-width: 479px) {
+    .titleBorder{
+        width: 70%;
+        margin-top:0.4rem;
+    }
+
+    .container {
+        margin-left:0;
+        padding:1rem;
+    }
+
+    .title{
+        font-size:1.2rem;
+    }
+
+    .date{
+        font-size:0.7rem;
+
+    }
+
+    .tag{
+        font-size:0.45rem;
+    }
+
+    .description{
+        font-size:0.6rem;
+
+    }
+}

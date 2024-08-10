@@ -1,0 +1,31 @@
+
+
+
+.pageList{
+    display:flex;
+    justyify-content :center;
+    place-content: center;
+    gap:0.5rem;
+    padding:0.4rem;
+}
+
+.page{
+    background-color: rgb(12 74 110);
+    list-style: none;
+    width:1.3rem;
+    height:2rem;
+    position:relative ;
+    border-radius: 0.375rem; /* 6px */
+
+}
+
+.pgae:hover {
+    background-color: yellow;
+
+}
+.pageText{
+    color: rgb(243 244 246);
+    position:absolute;
+    left:25%;
+
+}
