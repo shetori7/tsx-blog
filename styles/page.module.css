@@ -5,5 +5,8 @@
     max-width: 100%;
     overflow-wrap: break-word;
     padding: 2rem;
-    margin-left:4rem
+    margin-left:4rem;
+    @media  only screen and (max-width: 479px){
+        margin-left:0rem;
+    }
 }

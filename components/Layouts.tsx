@@ -19,7 +19,7 @@ function Layouts({ children, home = false }) {
 				<link rel="icon" href="/images/shetori_big.jpg"></link>
 				<title>{siteTitle}</title>
 				<meta name="description" content="開発ブログ" />
-				<meta name="author" content="こうのとり"/>
+				<meta name="author" content="こうのとり" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta
 					name="google-site-verification"
@@ -28,32 +28,34 @@ function Layouts({ children, home = false }) {
 			</Head>
 			<Analytics />
 			<header className={styles.header}>
-				{home ? (
-					<>
-						<Link href={`/`}>
-							<img
-								src="/images/shetori.jpg"
-								className={`${utilStyles.borderCircle} ${styles.headerHomeImage}`}
-							></img>
-						</Link>
-
-						<h1 className={`${utilStyles.headingXl} ${homeStyle.sitetitle}`}>
-							{name}
-						</h1>
-					</>
-				) : (
-					<>
-						<Link href={`/`}>
-							<img
-								src="/images/shetori.jpg"
-								className={`${utilStyles.borderCircle} ${styles.headerHomeImage}`}
-							></img>
-						</Link>
-						<h1 className={`${utilStyles.headingXl} ${homeStyle.sitetitle}`}>
-							{name}
-						</h1>
-					</>
-				)}
+				<Link href={`/`}>
+					<img
+						src="/images/shetori.jpg"
+						className={`${utilStyles.borderCircle} ${styles.headerHomeImage}`}
+					></img>
+				</Link>
+				<h1 className={`${utilStyles.headingXl} ${homeStyle.sitetitle}`}>
+					{name}
+				</h1>
+				<nav className={styles.nav}>
+					<ul className={styles.navList}>
+						<li className={styles.nav__item}>
+							<Link className={styles.nav__link} href="/">
+								ホーム
+							</Link>
+						</li>
+						<li className={styles.nav__item}>
+							<Link className={styles.nav__link} href="/posts/page/1">
+								記事一覧
+							</Link>
+						</li>
+						<li className={styles.nav__item}>
+							<Link className={styles.nav__link} href="/profile">
+								プロフィール
+							</Link>
+						</li>
+					</ul>
+				</nav>
 			</header>
 			<main>
 				<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -62,10 +64,13 @@ function Layouts({ children, home = false }) {
 						<div className={homeStyle.sidebar}>
 							<div className={homeStyle.bio}>
 								<div className={homeStyle.icon}>
+									<Link href="/profile">
 									<img
 										src="/images/shetori.jpg"
 										className={homeStyle.sideBarImage}
 									></img>
+									</Link>
+
 								</div>
 								<div className={homeStyle.sidebarMessage}>
 									都内SIer勤務のSEです。未経験~中級者向けに

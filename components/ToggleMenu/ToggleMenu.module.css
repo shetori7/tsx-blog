@@ -1,0 +1,21 @@
+.menu {
+    cursor: pointer;
+
+}
+
+.menu ul {
+    position:absolute;
+    list-style-type: none;
+    background-color: red;
+
+
+}
+
+.menu li {
+    position:relative;
+    cursor: pointer;
+}
+
+.menu li:hover {
+    background-color: #f1f1f1;
+}

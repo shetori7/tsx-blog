@@ -5,13 +5,12 @@
   }
   
   .header {
-    width: 100%; /* ヘッダーの幅を全体に */
-    /* position: fixed; ヘッダーを固定する */
-    top: 0; /* 上端に配置 */
-    background-color: #ffffff; /* ヘッダーの背景色 */
+    width: 100%; 
+    top: 0; 
+    background-color: #ffffff;
     display: flex;
-    align-items: center; /* アイテムを垂直方向の中央に配置 */
-    border-bottom: 2px solid #ccc; /* ヘッダーの下に灰色の線を追加 */
+    align-items: center;
+    border-bottom: 2px solid #ccc; 
   }
   
   .headerImage {
@@ -28,4 +27,35 @@
     margin: 3rem 0 0;
   }
 
+.nav{
+  margin:0 0 0 auto;
+  @media  only screen and (max-width: 479px){
+    display:none
+  }
+}
 
+.navList{
+  display:flex;
+  list-style:none;
+}
+
+
+.nav__item  {
+  padding:1rem 1rem 1rem 1rem ;
+  margin-right:1rem;
+  transition:0.4s;
+  border-radius: 10% / 50%;
+}
+
+.nav__item:hover{
+  background-color:#EEEEEE;
+}
+
+.nav__link{
+  text-decoration:none!important;
+  font-weight:600;
+}
+
+.nav__toggle {
+  margin-right:3rem;
+} 

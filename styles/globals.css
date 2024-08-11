@@ -18,10 +18,12 @@ a {
   text-decoration: none;
   text-align:left;
   display: block;
+
 }
 
 a:hover {
   text-decoration: underline;
+
 }
 
 img {

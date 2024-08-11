@@ -22,7 +22,6 @@
   align-items: flex-start;
   flex-wrap: wrap;
   max-width: 100rem;
-  gap: 2rem;
   margin: 2rem;
 }
 
@@ -39,7 +38,7 @@
   min-width: 18rem;
   overflow-wrap: break-word;
   margin-left: 1.5rem;
-  padding: auto;
+  padding-right:4rem;
 }
 
 .bio {
@@ -70,8 +69,8 @@
 }
 
 .sideBarImage:hover {
-  transform:scale(1.1,1.1);
-  transition:1s all;
+  transform:scale(1.05,1.05);
+  transition:0.3s;
 }
 
 .icon {
