@@ -15,7 +15,7 @@ const Category = (props: Props) => {
 				<div className={style.categorySearchTitle}>カテゴリー</div>
 				<ul>
 					{tags.map((tag) => (
-						<li>
+						<li key={tag}>
 							<Link key={tag} href={`/posts/tag/${tag}/page/1`}>
 								<span>{tag}</span>
 							</Link>
