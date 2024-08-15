@@ -1,5 +1,5 @@
-import Layout from "../../components/Layouts";
-import { getAllPosts, getSinglePost } from "@/lib/notionAPI";
+import Layout from "../../components/Layouts/Layouts";
+import { getAllPosts, getAllTags, getSinglePost } from "@/lib/notionAPI";
 import Link from "next/link";
 import Markdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
@@ -18,18 +18,20 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 	const post = await getSinglePost(params.slug);
+	const allTags = await getAllTags();
 
 	return {
 		props: {
 			post,
+			allTags,
 		},
 		revalidate: 60 * 60 * 24,
 	};
 }
 
-export default function Post({ post }) {
+export default function Post({ post ,allTags}) {
 	return (
-		<Layout>
+		<Layout home={false} allTags={allTags}>
 			<section className={style.container}>
 				<div className={style.title}>{post.metadata.title}</div>
 				<div className={style.titleBorder}></div>

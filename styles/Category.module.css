@@ -1,0 +1,24 @@
+.categorySearchBox{
+    background-color: #fff;
+    margin-top:1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    @media  only screen and (max-width: 479px){
+        font-size: 1rem; /* 文字サイズ */
+    }
+}
+
+.categorySearchTitle{
+    text-align:left;
+
+}
+
+.categorySearchTitle:before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f03a';
+    font-weight: 700;
+    padding-left: 0.1rem;
+    padding-right: 0.4rem;
+    color:#292827;
+}

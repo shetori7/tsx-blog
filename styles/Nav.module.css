@@ -1,0 +1,32 @@
+.nav{
+    margin:0 0 0 auto;
+    @media  only screen and (max-width: 479px){
+        display:none
+    }
+}
+
+.navList{
+    display:flex;
+    list-style:none;
+}
+
+
+.nav__item  {
+    padding:1rem 1rem 1rem 1rem ;
+    margin-right:1rem;
+    transition:0.4s;
+    border-radius: 10% / 50%;
+}
+
+.nav__item:hover{
+    background-color:#EEEEEE;
+}
+
+.nav__link{
+    text-decoration:none!important;
+    font-weight:600;
+}
+
+.nav__toggle {
+    margin-right:3rem;
+} 

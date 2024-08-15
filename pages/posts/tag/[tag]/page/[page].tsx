@@ -2,13 +2,15 @@ import {
 	getAllTags,
 	getNumberOfPagesByTag,
 	getPostsByTag,
-} from "../../../../../lib/notionAPI";
-import SinglePost from "../../../../../components/Post/SinglePost";
+} from "@/lib/notionAPI";
+import SinglePost from "@/components/Post/SinglePost";
 import { GetStaticPaths, GetStaticProps } from "next";
-import Pagenation from "../../../../../components/Pagenation/Pagenation";
-import Tag from "../../../../../components/Tag/Tag";
-import Layouts from "@/components/Layouts";
-import style from "../../../../../styles/page.module.css";
+import Pagenation from "@/components/Pagenation/Pagenation";
+import Layouts from "@/components/Layouts/Layouts";
+import style from "@/styles/page.module.css";
+import utilStyles from "@/styles/utils.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHashtag } from "@fortawesome/free-solid-svg-icons";
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const allTags = await getAllTags();
@@ -41,7 +43,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 		upperCaseCurrentTag,
 		parseInt(currentPage, 10)
 	);
-
 	const numberOfPagesByTag = await getNumberOfPagesByTag(upperCaseCurrentTag);
 
 	return {
@@ -50,17 +51,27 @@ export const getStaticProps: GetStaticProps = async (context) => {
 			numberOfPagesByTag,
 			currentTag,
 			allTags,
+			upperCaseCurrentTag,
 		},
 		revalidate: 60 * 60 * 24,
 	};
 };
 
-const BlogPageList = ({ posts, numberOfPagesByTag, currentTag, allTags }) => {
+const BlogPageList = ({
+	posts,
+	numberOfPagesByTag,
+	currentTag,
+	allTags,
+	upperCaseCurrentTag,
+}) => {
 	return (
-		<Layouts>
-			<div className={style.container}>
-				<main >
-					<section >
+		<Layouts home={false} allTags={allTags}>
+			<div className={utilStyles.global}>
+				<div className={utilStyles.pageTitleBox}>
+					<span className={style.tagTitle}>{upperCaseCurrentTag}</span>
+				</div>
+				<main>
+					<div className={utilStyles.grid}>
 						{posts.map((post) => (
 							<div key={post.title}>
 								<SinglePost
@@ -73,7 +84,7 @@ const BlogPageList = ({ posts, numberOfPagesByTag, currentTag, allTags }) => {
 								/>
 							</div>
 						))}
-					</section>
+					</div>
 					<Pagenation numberOfpage={numberOfPagesByTag} tag={currentTag} />
 				</main>
 			</div>

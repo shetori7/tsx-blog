@@ -6,9 +6,8 @@ import {
 import SinglePost from "../../../components/Post/SinglePost";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Pagenation from "../../../components/Pagenation/Pagenation";
-import Tag from "../../../components/Tag/Tag";
-import style from "../../../styles/page.module.css";
-import Layouts from "@/components/Layouts";
+import utilStyles from "@/styles/utils.module.css";
+import Layouts from "@/components/Layouts/Layouts";
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const numberOfPage = await getNumberOfPages();
@@ -41,9 +40,13 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 const BlogPageList = ({ postsByPage, numberOfPage, allTags }) => {
 	return (
-		<Layouts >
-			<div className={style.container}>
-				<section>
+		<Layouts home={false} allTags={allTags}>
+			<div className={utilStyles.global}>
+				<div className={utilStyles.pageTitleBox}>
+					<span className={utilStyles.pageTitle}>記事一覧</span>
+					<span className={utilStyles.subPgaeTitle}>– Posts List –</span>
+				</div>
+				<div className={utilStyles.grid}>
 					{postsByPage.map((post) => (
 						<div key={post.title}>
 							<SinglePost
@@ -56,7 +59,7 @@ const BlogPageList = ({ postsByPage, numberOfPage, allTags }) => {
 							/>
 						</div>
 					))}
-				</section>
+				</div>
 				<Pagenation numberOfpage={numberOfPage} tag={""} />
 			</div>
 		</Layouts>

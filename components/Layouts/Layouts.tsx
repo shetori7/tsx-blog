@@ -1,14 +1,17 @@
 import Head from "next/head";
-import styles from "./layout.module.css";
+import styles from "@/styles/layout.module.css";
 import homeStyle from "@/styles/Home.module.css";
-import utilStyles from "../styles/utils.module.css";
+import utilStyles from "@/styles/utils.module.css";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
+import Tag from "../Category/Category";
+import Nav from "../Nav/Nav";
+import Category from "../Category/Category";
 
 const name = "こうのとりの開発ブログ";
 export const siteTitle = "こうのとりの開発ブログ";
 
-function Layouts({ children, home = false }) {
+function Layouts({ children, home, allTags }) {
 	return (
 		<div>
 			<Head>
@@ -37,25 +40,7 @@ function Layouts({ children, home = false }) {
 				<h1 className={`${utilStyles.headingXl} ${homeStyle.sitetitle}`}>
 					{name}
 				</h1>
-				<nav className={styles.nav}>
-					<ul className={styles.navList}>
-						<li className={styles.nav__item}>
-							<Link className={styles.nav__link} href="/">
-								ホーム
-							</Link>
-						</li>
-						<li className={styles.nav__item}>
-							<Link className={styles.nav__link} href="/posts/page/1">
-								記事一覧
-							</Link>
-						</li>
-						<li className={styles.nav__item}>
-							<Link className={styles.nav__link} href="/profile">
-								プロフィール
-							</Link>
-						</li>
-					</ul>
-				</nav>
+				<Nav></Nav>
 			</header>
 			<main>
 				<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -65,23 +50,25 @@ function Layouts({ children, home = false }) {
 							<div className={homeStyle.bio}>
 								<div className={homeStyle.icon}>
 									<Link href="/profile">
-									<img
-										src="/images/shetori.jpg"
-										className={homeStyle.sideBarImage}
-									></img>
+										<img
+											src="/images/shetori.jpg"
+											className={homeStyle.sideBarImage}
+										></img>
 									</Link>
-
 								</div>
 								<div className={homeStyle.sidebarMessage}>
-									都内SIer勤務のSEです。未経験~中級者向けに
-									<br />
-									わかりやすくIT技術解説をします。
+									都内SIer勤務SE。フロントエンドからインフラまで幅広く勉強中。得意な言語はNext.js,C#。			
 								</div>
+
 							</div>
+							<Category tags={allTags}></Category>
 						</div>
 					</div>
 				</section>
 			</main>
+			<footer className={styles.footer}>
+				© 2024 こうのとりの開発ブログ
+			</footer>
 		</div>
 	);
 }

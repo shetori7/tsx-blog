@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
+import utilStyles from "@/styles/utils.module.css";
 import styles from "@/styles/Home.module.css";
-import Layouts from "@/components/Layouts";
+import Layouts from "@/components/Layouts/Layouts";
 import { getAllTags, getTopPosts } from "@/lib/notionAPI";
 import SinglePost from "@/components/Post/SinglePost";
 import Link from "next/link";
@@ -22,8 +23,12 @@ export async function getStaticProps() {
 
 export default function Home({ topPosts, allTags }) {
 	return (
-		<Layouts home>
+		<Layouts home allTags={allTags}>
 			<div className={styles.global}>
+				<div className={utilStyles.pageTitleBox}>
+					<span className={utilStyles.pageTitle}>最新の投稿</span>
+					<span className={utilStyles.subPgaeTitle}>– New Posts –</span>
+				</div>
 				<div className={styles.grid}>
 					{topPosts.map((post) => (
 						<div className="mx-4" key={post.id}>
@@ -37,10 +42,7 @@ export default function Home({ topPosts, allTags }) {
 							/>
 						</div>
 					))}
-					<Link
-						href={"/posts/page/1"}
-						className={styles.moreButton}
-					>
+					<Link href={"/posts/page/1"} className={styles.moreButton}>
 						...もっと見る
 					</Link>
 				</div>

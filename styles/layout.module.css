@@ -1,0 +1,42 @@
+.container {
+    max-width: 1244px;
+    padding: 0 1rem;
+    margin: 3rem auto 6rem;
+  }
+  
+  .header {
+    width: 100%; 
+    top: 0; 
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ccc; 
+  }
+  
+  .headerImage {
+    width: 5rem;
+    height: 6rem;
+  }
+  
+  .headerHomeImage {
+    width: 5rem;
+    height: 5rem;
+    @media  only screen and (max-width: 479px){
+      width: 3.7rem;
+      height: 3.5rem;
+  }
+  }
+  
+  .backToHome {
+    margin: 3rem 0 0;
+  }
+
+  .footer {
+    padding: 1rem;
+    font-size: 15px;
+    color: #999;
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+
+  }
