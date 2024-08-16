@@ -8,6 +8,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Pagenation from "../../../components/Pagenation/Pagenation";
 import utilStyles from "@/styles/utils.module.css";
 import Layouts from "@/components/Layouts/Layouts";
+export const fetchCache = 'force-no-store';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const numberOfPage = await getNumberOfPages();
@@ -37,7 +38,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 		revalidate: 60 ,
 	};
 };
-
 const BlogPageList = ({ postsByPage, numberOfPage, allTags }) => {
 	return (
 		<Layouts home={false} allTags={allTags}>
