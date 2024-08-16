@@ -42,8 +42,10 @@ export default function Home({ topPosts, allTags }) {
 							/>
 						</div>
 					))}
+				</div>
+				<div className={styles.moreButtonBox}>
 					<Link href={"/posts/page/1"} className={styles.moreButton}>
-						...もっと見る
+						もっと見る
 					</Link>
 				</div>
 			</div>

@@ -68,6 +68,15 @@
     color:#4d5156
 }
 
+.home:before{
+    font-family: "Font Awesome 5 Free";
+    content: '\f015';
+    font-weight: 900;
+    padding-top: 0.1rem;
+    padding-left: 0.1rem;
+    padding-right: 0.3rem;
+}
+
 @media  only screen and (max-width: 479px) {
     .titleBorder{
         width: 70%;

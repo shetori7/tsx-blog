@@ -72,7 +72,7 @@ export default function Post({ post ,allTags}) {
 						{post.markdown.parent}
 					</Markdown>
 					<Link href={"/"}>
-						<span className="pb-20 block mt-3 text-sky-900">←ホームへ戻る</span>
+						<span className={style.home}>ホームへ戻る</span>
 					</Link>
 				</div>
 			</section>

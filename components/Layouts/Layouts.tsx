@@ -49,7 +49,7 @@ function Layouts({ children, home, allTags }) {
 						<div className={homeStyle.sidebar}>
 							<div className={homeStyle.bio}>
 								<div className={homeStyle.icon}>
-									<Link href="/profile">
+									<Link href="/profile/profile">
 										<img
 											src="/images/shetori.jpg"
 											className={homeStyle.sideBarImage}
@@ -59,7 +59,6 @@ function Layouts({ children, home, allTags }) {
 								<div className={homeStyle.sidebarMessage}>
 									都内SIer勤務SE。フロントエンドからインフラまで幅広く勉強中。得意な言語はNext.js,C#。			
 								</div>
-
 							</div>
 							<Category tags={allTags}></Category>
 						</div>
@@ -67,7 +66,7 @@ function Layouts({ children, home, allTags }) {
 				</section>
 			</main>
 			<footer className={styles.footer}>
-				© 2024 こうのとりの開発ブログ
+				© 2024 konotori
 			</footer>
 		</div>
 	);

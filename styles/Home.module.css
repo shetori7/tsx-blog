@@ -34,10 +34,9 @@
 }
 
 .sidebar {
-  width:22rem;
-  min-width: 18rem;
+  width:20rem;
   margin-left: 1.5rem;
-  padding-right:4rem;
+  margin-right:4rem;
 }
 
 .bio {
@@ -81,13 +80,24 @@
   text-align:left;
 }
 
+.moreButton{
+  text-align:right;
+  margin:0 1rem 1rem 0;
+}
 
+.moreButton:after{
+  font-family: "Font Awesome 5 Free";
+  content: '\f101';
+  font-weight: 900;
+  padding-top: 0.1rem;
+  padding-left: 0.1rem;
+  padding-right: 0.3rem;
+}
 
-@media  only screen and (max-width: 479px) {
+@media  only screen and (max-width: 600px) {
   .global {
-    width: 1rem;
     margin-left:0;
-
+    margin-right:0.1rem;
   }
 
   .grid{
@@ -100,7 +110,7 @@
   }
   .sidebar{
     margin-left: 0rem;
-    padding-right:1rem;
+    margin-right:0.1rem;
   }
 
   .moreButton{

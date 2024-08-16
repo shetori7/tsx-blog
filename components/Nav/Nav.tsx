@@ -17,7 +17,7 @@ function Nav() {
                 </Link>
             </li>
             <li className={styles.nav__item}>
-                <Link className={styles.nav__link} href="/profile">
+                <Link className={styles.nav__link} href="/profile/profile">
                     プロフィール
                 </Link>
             </li>

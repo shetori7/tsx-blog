@@ -1,0 +1,62 @@
+.profTitle{
+    font-size:1.8rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.05rem;
+    margin:1.5rem 0 3rem 1.5rem;
+    text-align: left;
+    coloer:#494949;
+    @media  only screen and (max-width: 479px){
+        font-size: 1.3rem; /* 文字サイズ */
+        margin:1rem 0 1rem 1rem;
+    }
+}
+.profImageBox{
+    justify-content: center;
+    display:flex;
+    margin-bottom:5rem;
+    @media  only screen and (max-width: 479px){
+        margin-bottom:1rem;
+    }
+}
+
+.profImage {
+    border-radius: 500rem;
+    border: solid 1px #777777;
+    width: 11rem;
+    transition: 0.3s;
+    overflow:hidden;
+    content:center;
+    @media  only screen and (max-width: 479px){
+        width: 6rem;
+    }
+}
+
+.profContents{
+    text-align: left;
+    margin:1.5rem 0 3rem 1.5rem;
+    @media  only screen and (max-width: 479px){
+        font-size: 0.8rem; /* 文字サイズ */
+        margin:1rem 0.7rem 2rem 0.7rem;
+    }
+}
+
+.profHeading {
+    font-size:1.5rem;
+    padding: 0.5em;
+    color: #494949;
+    background: #dfe1ed;
+    border-left: solid 5px #003399;
+    margin:2rem 1.5rem 2rem 0;
+    @media  only screen and (max-width: 479px){
+        margin:1rem 1rem 1rem 0;
+        font-size:0.9rem;
+    }
+}
+
+.profDescription{
+    margin-left:1rem;
+    @media  only screen and (max-width: 479px){
+        margin-left:0.5rem;
+    }
+}
