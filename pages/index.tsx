@@ -5,6 +5,8 @@ import Layouts from "@/components/Layouts/Layouts";
 import { getAllTags, getTopPosts } from "@/lib/notionAPI";
 import SinglePost from "@/components/Post/SinglePost";
 import Link from "next/link";
+export const fetchCache = 'force-no-store';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
