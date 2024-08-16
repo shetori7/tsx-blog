@@ -8,7 +8,6 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import Pagenation from "../../../components/Pagenation/Pagenation";
 import utilStyles from "@/styles/utils.module.css";
 import Layouts from "@/components/Layouts/Layouts";
-export const fetchCache = 'force-no-store';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const numberOfPage = await getNumberOfPages();

@@ -4,7 +4,6 @@ import homeStyle from "@/styles/Home.module.css";
 import utilStyles from "@/styles/utils.module.css";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
-import Tag from "../Category/Category";
 import Nav from "../Nav/Nav";
 import Category from "../Category/Category";
 

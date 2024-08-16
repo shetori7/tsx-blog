@@ -9,7 +9,6 @@ import Pagenation from "@/components/Pagenation/Pagenation";
 import Layouts from "@/components/Layouts/Layouts";
 import style from "@/styles/page.module.css";
 import utilStyles from "@/styles/utils.module.css";
-export const fetchCache = 'force-no-store';
 
 export const getStaticPaths: GetStaticPaths = async () => {
 	const allTags = await getAllTags();

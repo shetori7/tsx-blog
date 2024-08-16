@@ -5,8 +5,6 @@ import Markdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vsDarkPlus } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import style from "../../styles/slug.module.css";
-export const fetchCache = 'force-no-store';
-
 
 export async function getStaticPaths() {
 	const allPosts = await getAllPosts();
@@ -27,7 +25,6 @@ export async function getStaticProps({ params }) {
 			post,
 			allTags,
 		},
-		revalidate: 60 * 60 * 24,
 	};
 }
 
