@@ -35,7 +35,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 			numberOfPage,
 			allTags,
 		},
-		revalidate: 60 ,
 	};
 };
 const BlogPageList = ({ postsByPage, numberOfPage, allTags }) => {
