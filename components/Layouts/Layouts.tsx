@@ -20,8 +20,8 @@ function Layouts({ children, home, allTags }) {
 				></link>
 				<link rel="icon" href="/images/shetori_big.jpg"></link>
 				<title>{siteTitle}</title>
-				<meta name="description" content="実務の中で共有が必要だと思った技術課題、ITの基礎知識、資格試験の勉強方法まで幅広く解説するブログです。"/>
-				<meta name="author" content="こうのとり" />
+				<meta name="description" content="こうのとりの開発ブログ。実務の中で共有が必要だと思った技術課題、ITの基礎知識、資格試験の勉強方法まで幅広く解説するブログです。"/>
+				<meta name="author" content="こうのとりの開発ブログ" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta name="google-site-verification" content="jjXcm3S2ASguoeU-Jq_7hF_GuUkj_3b6BxU58KibHJA" />
 			</Head>
